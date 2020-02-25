@@ -1,0 +1,26 @@
+﻿
+body
+{
+    /*background: url("../imagenes/fondologin.jpg"); */
+}
+
+.center-form {
+    background-color: dimgrey;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: url("../imagenes/fondogym.jpg");
+}
+
+.form {
+    background-color: Background;
+    opacity: 0.4;
+    width: 450px;
+}
+
+h3 {
+    color: blanchedalmond;
+    /*color: red;*/
+}
+

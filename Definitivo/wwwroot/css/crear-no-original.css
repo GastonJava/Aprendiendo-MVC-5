@@ -1,0 +1,209 @@
+/* Dispositivos movil Smarphone */
+
+@media (min-width: 375px) {
+
+    body {
+        margin: 0px;
+        box-sizing: border-box;
+        background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../imagenes/congreso.jpg") no-repeat center center fixed;
+        background-size: cover;
+        opacity: 0.9;
+    }
+
+    .card {
+        background-color: transparent;
+    }
+
+    .container-fluid {
+        padding: 100px;
+    }
+
+    .backgroundimg {
+        z-index: 1;
+    }
+
+    label {
+        color: white;
+    }
+
+    button {
+        background-color: pink;
+    }
+
+    .row {
+        background-color: transparent;
+    }
+
+    .jumbotron {
+        /*padding-top: 100px;*/
+        background: transparent;
+    }
+
+
+    /*.moverizq h2 {
+        display: none;
+    }*/
+}
+
+
+/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+@media (min-width: 768px) {
+    body {
+        margin: 0px;
+        box-sizing: border-box;
+    }
+
+    .container{
+        padding: 100px;
+    }
+
+
+    button {
+        background-color:;
+    }
+
+    .row {
+        /*background-color: ivory;*/
+    }
+
+
+    .jumbotron {
+        padding-top: 100px;
+        background-color: transparent;
+    }
+
+
+    .card {
+        /*background-color: transparent;*/
+    }
+
+    .rounded-circle {
+        background-color: transparent;
+    }
+    
+    img {
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+
+
+/*.moverizq h2 {
+        display: none;
+    }*/
+
+}
+
+/* Large devices (desktops, 978px and up) */
+@media (min-width: 978px) {
+    body {
+        margin: 0px;
+        box-sizing: border-box;
+    }
+
+    .container {
+        padding: 100px;
+    }
+
+    button {
+        /*background-color: red;*/
+    }
+
+    .row {
+        background-color: ivory;
+    }
+
+    .jumbotron {
+        padding-top: 100px;
+    }
+    
+     img {
+        align-items: center;
+        justify-content: center;
+    }
+
+
+
+    /*.moverizq h2 {
+        display: none;
+    }*/
+
+}
+
+/* Extra large devices (large desktops, 978px and up) */
+@media (min-width: 978px) {
+    body {
+        margin: 0px;
+        box-sizing: border-box;
+    }
+
+    label {
+        color: black;
+    }
+
+    .container {
+        padding: 60px;
+        background-color: transparent;
+        width: 100%;
+    }
+
+    /* Mover, achicar y editar la imagen y el form*/
+    .moverder {
+        
+        background-color: red; 
+        
+    }
+
+    .card-body {
+        background-color: ;
+        
+    }
+    
+    .card{
+        
+    }
+    
+    button {
+        color: coral;
+    }
+
+    .row {
+        background-color: transparent;
+    }
+
+    label {
+        color: whitesmoke;
+    }
+
+    .jumbotron {
+        width: 200px;
+        padding-top: 20px;
+    }
+
+    img {
+        align-items: center;
+        justify-content: center;
+    }
+
+    .rounded-circle {
+       
+    }
+    
+    .no-rounded {
+      width: 100px;
+      border: none;
+      background-color: green;
+        
+    }
+    
+    button{
+        background-color: brown;
+    }
+
+
+
+    /*.moveizq h2{
+        display: contents;
+    }*/
+}
