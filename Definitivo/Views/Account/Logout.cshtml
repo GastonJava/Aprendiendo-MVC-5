@@ -1,0 +1,51 @@
+﻿
+@{
+    ViewData["Title"] = "Logout";
+    Layout = "~/Views/layouts/_LayoutAccount.cshtml";
+}
+
+
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width = device-width" />
+    <title>@ViewBag.Title</title>
+</head>
+
+<body>
+    <div>
+        @if (SignInManager.IsSignedIn(User))
+            {
+                <div>@UserManager.GetUserAsync(User)</div>
+                <form method="post" asp-controller="Account" aspcontroller="Logout">
+                    <input type="submit" value="Logout" />
+                </form>
+            }
+            else
+            {
+                <a asp-controller="Account" asp-action="Login">Login</a>
+                <a asp-controller="Account" asp-action="Register">Register</a>
+            }
+    </div>
+
+    <div>
+        @DateTime.Now
+    </div>
+
+    <div>
+        @*@RenderBody()*@
+    </div>
+
+</body>
+</html>
+
+
+
+@*--------------------*@
+
+
+

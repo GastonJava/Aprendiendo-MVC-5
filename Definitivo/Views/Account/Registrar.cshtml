@@ -6,7 +6,7 @@
 <html>
 
 @{
-    Layout = "~/Views/Account/_LayoutAccount.cshtml";
+    Layout = "~/Views/layouts/_LayoutAccount.cshtml";
 }
 
 <head>
@@ -44,7 +44,7 @@
                         <img src="/imagenes/maumiau.jpg" alt="mauricio gato" class="rounded-circle no-rounded" />
                     </div>
 
-                    <form class="border" method="post" asp-controller="register" asp-action="Registrar">
+                    <form class="border" method="post" asp-controller="Account" asp-action="Registrar">
                         @*<div asp-validation-summary="All" class="text-danger"></div>*@
 
                         <div class="form-group">
@@ -73,11 +73,26 @@
                         </div>
 
                         <div class="form-group">
-                            <label>Rol: </label>
-                            <div class="list-group">
-                                <a href="#" class="list-group-item disabled">Administrador</a>
-                                <a href="#" class="list-group-item disabled">Invitado</a>
+
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input" checked>
+                                <label class="custom-control-label text-info" for="customRadio1">Administrador</label>
                             </div>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
+                                <label class="custom-control-label text-info" for="customRadio2">Usuario</label>
+                            </div>
+
+                            <div class="custom-control custom-radio ">
+                                <input type="radio" id="customRadio3" name="customRadio" class="custom-control-input">
+                                <label class="custom-control-label text-info" for="customRadio3">Guest</label>
+                            </div>
+
+                            @*<label>Rol: </label>
+        <div class="list-group">
+            <a href="#" class="list-group-item ">Administrador</a>
+            <a href="#" class="list-group-item ">Invitado</a>
+        </div>*@
 
                         </div>
 

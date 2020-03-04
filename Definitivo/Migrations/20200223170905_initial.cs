@@ -1,10 +1,12 @@
-﻿using System;
-using Microsoft.EntityFrameworkCore.Migrations;
-
-namespace Definitivo.Migrations
+﻿namespace Definitivo.Migrations
 {
+    using Microsoft.EntityFrameworkCore.Migrations;
+    using System;
+
+    
     public partial class initial : Migration
     {
+       
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
@@ -195,6 +197,10 @@ namespace Definitivo.Migrations
                 filter: "[NormalizedUserName] IS NOT NULL");
         }
 
+        /// <summary>
+        /// The Down
+        /// </summary>
+        /// <param name="migrationBuilder">The migrationBuilder<see cref="MigrationBuilder"/></param>
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(

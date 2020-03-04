@@ -1,0 +1,24 @@
+﻿
+@model CrearRoleM
+@{
+    ViewData["Title"] = "Crear Nuevos Roles";
+    Layout = "~/Views/layouts/_LayoutAccount.cshtml";
+}
+
+<form class="border p-3 form justify-content-center d-flex "  method="post" asp-controller="Roles" asp-action="CrearRoles">
+    <div class="form-group">
+        <label asp-for="RoleName">Role Usuario: </label>
+        <input class="form-control" placeholder="Ingresar Rol" asp-for="RoleName" type="text" />
+        <span asp-validation-for="RoleName" class="alert-danger"></span>
+    </div>
+    @*<div class="form-group">
+            <label asp-for="PasswordHash">Contraseña: </label>
+            <input class="form-control" asp-for="PasswordHash" placeholder="Ingresar Contraseña" type="password" />
+            <span asp-validation-for="PasswordHash" class="alert-danger"></span>
+        </div>*@
+
+
+    <button class="btn btn-info" type="submit" value="User role">Enviar</button>
+    @Html.ValidationSummary(true, "", new { @class = "alert-danger" });
+</form>
+
