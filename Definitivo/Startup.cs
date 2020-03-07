@@ -11,21 +11,21 @@ namespace Definitivo
     using Microsoft.Extensions.DependencyInjection;
     using Microsoft.Extensions.Hosting;
 
-   
     public class Startup
     {
-        
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
         }
 
-       
         public IConfiguration Configuration { get; }
 
-       
         public void ConfigureServices(IServiceCollection services)
         {
+
+            // refresh paginas
+            services.AddRazorPages().AddRazorRuntimeCompilation();
+
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(
                     Configuration.GetConnectionString("DefaultConnection")));
@@ -50,17 +50,17 @@ namespace Definitivo
             services.AddMvc(
                 config =>
                {
-                   //var policy = new AuthorizationPolicyBuilder().RequireAuthenticatedUser().Build();
-                   //config.Filters.Add(new AuthorizeFilter(policy));
+                   var policy = new AuthorizationPolicyBuilder().RequireAuthenticatedUser().Build();
+                   config.Filters.Add(new AuthorizeFilter(policy));
                }).AddXmlSerializerFormatters();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
             {
+
                 app.UseDeveloperExceptionPage();
                 app.UseDatabaseErrorPage();
             }
@@ -71,6 +71,10 @@ namespace Definitivo
                 app.UseHsts();
             }
             app.UseHttpsRedirection();
+
+            // browser link para refesh paginas
+            app.UseBrowserLink();
+
             app.UseStaticFiles();
 
             app.UseRouting();
@@ -82,7 +86,8 @@ namespace Definitivo
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Account}/{action=Login}/{id?}");
+                //pattern: "{controller=Account}/{action=Login}/{id?}");
+                pattern: "{controller=Inicio}/{action=Inicio}/{id?}");
                 endpoints.MapRazorPages();
             });
         }

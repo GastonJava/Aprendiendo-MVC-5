@@ -8,44 +8,44 @@
 @using Microsoft.AspNetCore.Identity
 @inject SignInManager<IdentityUser> SignInManager
 @inject UserManager<IdentityUser> UserManager
-<!DOCTYPE html>
-<html>
+
+
 
 <head>
     <meta name="viewport" content="width = device-width" />
     <title>@ViewBag.Title</title>
 </head>
 
-<body>
-    <div>
-        @if (SignInManager.IsSignedIn(User))
-            {
-                <div>@UserManager.GetUserAsync(User)</div>
-                <form method="post" asp-controller="Account" aspcontroller="Logout">
-                    <input type="submit" value="Logout" />
-                </form>
-            }
-            else
-            {
-                <a asp-controller="Account" asp-action="Login">Login</a>
-                <a asp-controller="Account" asp-action="Register">Register</a>
-            }
-    </div>
+<div>
+        @*@if (SignInManager.IsSignedIn(User))
+        {
+            <div>@UserManager.GetUserAsync(User)</div>
+            <form method="post" asp-controller="Account" asp-action="Logout">
+                <input type="submit" value="Logout" />
+            </form>
 
-    <div>
-        @DateTime.Now
-    </div>
+            <h3>Aca esta el logout</h3>
+        }
+        else
+        {
+            <h1>Aca esta el logout 2</h1>
 
-    <div>
-        @*@RenderBody()*@
-    </div>
+            <a asp-controller="Account" asp-action="Login">Login</a>
+            <a asp-controller="Account" asp-action="Register">Register</a>
+        }*@
 
-</body>
-</html>
+        <h3 class="text-danger active">Hola este es el texto de logout</h3>
+</div>
+
+<div>
+    @DateTime.Now
+</div>
+
+<div>
+    @*@RenderBody()*@
+</div>
+
 
 
 
 @*--------------------*@
-
-
-

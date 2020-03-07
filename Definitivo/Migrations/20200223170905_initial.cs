@@ -3,10 +3,8 @@
     using Microsoft.EntityFrameworkCore.Migrations;
     using System;
 
-    
     public partial class initial : Migration
     {
-       
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(

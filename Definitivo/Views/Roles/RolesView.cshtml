@@ -7,9 +7,6 @@
 <h1 class="text-danger">Vista de lista de roles </h1>
 
 
-
-
-
 @if (Model.Any())
 {
     @foreach (var rol in Model)
@@ -30,9 +27,7 @@
                    asp-action="Editar"
                    asp-route-id="@rol.Id"
                    class="btn btn-dark"
-                   style="width:auto"
-                   
-                   >
+                   style="width:auto">
                     
                     Editar rol
 
@@ -60,6 +55,3 @@ else
     <a asp-action="CrearRoles">Crear nuevo rol </a>
 
 }
-
-
-

@@ -9,18 +9,14 @@
     using System.Threading.Tasks;
 
     //[Authorize]
-    
     public class AccountController : Controller
     {
-        
         private readonly UserManager<IdentityUser> _usermanager;
 
         private readonly SignInManager<IdentityUser> _signInManager;
 
-       
         private readonly RoleManager<IdentityRole> _roleManager;
 
-        
         public AccountController(UserManager<IdentityUser> userManager, SignInManager<IdentityUser> signInManager, RoleManager<IdentityRole> roleManager)
         {
             _usermanager = userManager;
@@ -28,7 +24,6 @@
             _roleManager = roleManager;
         }
 
-      
         [HttpGet]
         [AllowAnonymous]
         public IActionResult Registrar()
@@ -36,7 +31,6 @@
             return View();
         }
 
-       
         [HttpPost]
         [AllowAnonymous]
         public async Task<IActionResult> Registrar(UsuarioModelCustom model)
@@ -79,11 +73,22 @@
             return View(model);
         }
 
-       
         [AllowAnonymous]
         [HttpGet]
-        public IActionResult Login()
+        public async Task<IActionResult> Login()
         {
+
+
+            //var identityResult = await _signInManager.PasswordSignInAsync("nuevo", "nuevo", false, lockoutOnFailure: false);
+
+            //if (identityResult.Succeeded)
+            //{
+            //    return RedirectToAction("Inicio", "inicio");
+            //}
+            //else
+            //{
+            //    return BadRequest();
+            //}
             return View();
         }
 
@@ -92,64 +97,63 @@
         {
             //if (ModelState.IsValid)
             //{
-                try
+
+            try
+            {
+
+                var usuario = await _usermanager.FindByNameAsync(model.NombreUsuario);
+                var password = await _usermanager.CheckPasswordAsync(user: usuario, model.PasswordHash);
+
+
+                if (password)
                 {
+                    var identityResult = await _signInManager.PasswordSignInAsync(user: usuario, model.PasswordHash, false, lockoutOnFailure: false);
 
-                    var usuario = await _usermanager.FindByNameAsync(model.NombreUsuario);
-                    var password = await _usermanager.CheckPasswordAsync(user: usuario, model.PasswordHash);
+                    var claims = User.Claims.ToList();
 
 
-                    if (password)
+                    // EDIT: ver por que no recibe ningun tipo de claims
+                    // EDIT: el usuario se logea pero no me permite identificar el estado del usuario
+
+                    if (identityResult.Succeeded)
                     {
-                        var identityResult = await _signInManager.PasswordSignInAsync(user: usuario, model.PasswordHash, false, lockoutOnFailure: false);
-
-                        var claims = User.Claims.ToList();
-
-
-                        // EDIT: ver por que no recibe ningun tipo de claims
-                        // EDIT: el usuario se logea pero no me permite identificar el estado del usuario
-
-                        if (identityResult.Succeeded)
-                        {
-                            return RedirectToAction("Inicio", "inicio");
-                        }
-                        else
-                        {
-                            return BadRequest();
-                        }
+                        return RedirectToAction("Inicio", "inicio");
                     }
                     else
                     {
-                        return RedirectToAction("Login", "Account");
+                        return BadRequest();
                     }
-
-
                 }
-                catch (Exception ex)
+                else
                 {
-                    return View(ex.Message);
+                    return RedirectToAction("Login", "Account");
                 }
-            //}
+
+            }
+            catch (Exception ex)
+            {
+                return View(ex.Message);
+            }
 
             return BadRequest();
         }
 
-       
-        [HttpGet]
-        public IActionResult Logout()
-        {
-            return View();
-        }
+        //[HttpPost]
+        //public async Task<IActionResult> Logout(UsuarioModelCustom model)
+        //{
+        //    var role = await _usermanager.FindByIdAsync(model.Id);
 
-        [HttpPost]
-        public async Task<IActionResult> Logout(UsuarioModelCustom model)
+        //    return View(model);
+        //}
+        public async Task<IActionResult> Salir()
         {
             await _signInManager.SignOutAsync();
-            return Ok();
+            return RedirectToAction("Login", "Account");
         }
 
         [Authorize(Roles = "Admin")]
-        public IActionResult Admin() {
+        public IActionResult Admin()
+        {
             return View();
         }
     }

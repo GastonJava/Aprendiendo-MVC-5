@@ -1,3 +1,16 @@
-﻿@{
-    Layout = "_Layout";
+﻿
+
+@if (_signInManager.IsSignedIn(User))
+{
+    Layout = "~/Views/layouts/_usuariocomunlayout.cshtml";
+
+    if (User.IsInRole("Admin"))
+    {
+        Layout = "~/Views/layouts/_adminlayout.cshtml";
+    }
+
+}
+else
+{
+    Layout = "~/Views/layouts/_nologinlayout.cshtml";
 }

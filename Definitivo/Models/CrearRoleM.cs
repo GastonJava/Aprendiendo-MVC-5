@@ -1,16 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace Definitivo.Models
 {
-
     // AGREGAMOS UN NUEVO ROL DESDE EL MODEL CON EL ATRIBUTO NOMBRE, EL ID ES AUTO INCREMENTAL
     public class CrearRoleM
     {
-
         public CrearRoleM()
         {
             Users = new List<string>();

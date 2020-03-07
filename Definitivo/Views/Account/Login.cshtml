@@ -1,7 +1,9 @@
 ﻿
 @{
     ViewData["Title"] = "Login";
-    Layout = "~/Views/layouts/_LayoutAccount.cshtml";
+    //Layout = "~/Views/layouts/_LayoutAccount.cshtml";
+    
+    
 }
 
 @model UsuarioModelCustom
@@ -14,6 +16,7 @@
     <h3 class="bg-transparent text-center align-content-center">Iniciar session </h3>
     <div class="center-form">
 
+       
 
         <form class="border p-3 form justify-content-center" method="post" asp-controller="Account" asp-action="Login">
             <div class="form-group">
