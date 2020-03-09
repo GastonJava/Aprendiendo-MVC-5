@@ -1,42 +1,153 @@
 ﻿
 @{
     ViewData["Title"] = "Index";
-   
+
 }
 
-    <link href="~/css/Inicio.css"/>
+<link href="~/css/Inicio.css" />
 
-    <div class="container m-0 m-auto d-flex bg-info">
+<div class="container-fluid m-0 m-auto bg-info">
+
+    <div class="row justify-content-around h-auto">
+
         <div class="card m-2">
             <div class="card-header">
-                <h4 class="text-danger">header de la pagina</h4>
-                <h1 class="text-success">BIENVENIDOS A INICIO</h1>
+                <h4 class="text-danger">A modificar card header</h4>
+                <h1 class="text-primary">BIENVENIDOS A INICIO</h1>
             </div>
-            <div class="card-body">
-                <h3>este es el card body</h3>
+            <div class="card-body ">
+                <div class="row">
+                    <div class="col-4">
+                        <img class="img-fluid img-thumbnail rounded-50" src="~/imagenes/test.jpg" width="150" height="150" />
+                    </div>
+                    
+                    <div class="text-black-50 col-8">
+                        <p>Hola este es el texto 1</p>
+                        <p>lorem no tiene lorem automatico</p>
+                        <p>necesitamos lorem ipsum <strong>este es strong text</strong></p>
+                    </div>
+                </div>
+               
             </div>
             <div class="card-footer">
                 <h3>Este es el card footer </h3>
             </div>
         </div>
-        <div class="sidebar justify-content-end">
-            <div class="card bg-danger">
+
+        <div class="row sidebar m-2 bg-secondary">
+            <div class="card h-100">
 
                 <div class="card-header">
-                    <p>Side bar para pagina</p>
+                    <p>Sidebar para pagina</p>
                     <p class="text-danger">cabezal del sidebar</p>
                 </div>
                 <div class="card-body">
                     <p class="text-danger">Card body del sidebar</p>
                 </div>
 
-                <div class="footer">
+                <div class="footer text-center text-capitalize">
                     <p class="text-success">Footer del sidebar</p>
                 </div>
             </div>
-            
         </div>
-        
+
+    </div>
+   
+
+</div>
+
+
+<div class="container-fluid bg-dark">
+    <div class="row p-2 d-flex justify-content-around text-center">
+
+            <div class="col-5 bg-danger">
+                <h1>div numero 1</h1>
+            </div>
+
+            <div class="col-5 bg-success">
+                <h1>div numero 1</h1>
+            </div>
+
     </div>
 
 
+</div>
+
+<div class="container-fluid bg-primary">
+    <div class="row p-2 d-flex justify-content-around text-center">
+
+        <div class="col-5 bg-danger">
+            <h1>Otras Nuevas secciones web 1</h1>
+        </div>
+
+        <div class="col-5 bg-success">
+            <h1>Otras Nuevas secciones web 2</h1>
+        </div>
+
+    </div>
+
+
+</div>
+
+@*<footer class="footer font-small bg-dark pt-1">*@
+    
+    @*<div class="container-fluid text-center text-md-left">*@
+
+        @*<div class="row">
+
+            <div class="col-md-6 mt-md-0 mt-1 text-white-50">
+
+                <h5 class="text-uppercase">Footer Contenido</h5>
+                <p>Organizamos nuestros contenidos</p>
+                <div class="row">
+                    <p>Direccion: <strong>Av. Siempre Viva 2039</strong><i class="fas fa-phone"></i></p>
+                </div>
+                
+                <p>Cuidad: <strong>Barrio New Manhattan</strong></p>
+                <p>Telefono: <strong>351-6789295</strong></p>
+
+            </div>
+
+            <hr class="clearfix w-100 d-md-none pb-3" />
+
+
+            <div class="col-md-3 mb-md-0 mb-1 text-white-50">
+
+                <h5 class="text-uppercase">
+                    Enlace 1
+                </h5>
+
+                <ul class="list-unstyled">
+                    <li><a href="#" class="text-white-50">Ir arriba</a></li>
+                    <li><a href="#" class="text-white-50">Link 2</a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-3 mb-md-0 mb-1 text-white-50">
+                <h5 class="text-uppercase">
+                    Enlaces 2
+                </h5>
+
+                <ul class="list-unstyled">
+                    <li><a class="text-white-50" href="#">Link 1</a></li>
+                    <li><a class="text-white-50" href="#">Link 2</a></li>
+                </ul>
+            </div>
+
+
+
+        </div>*@ <!-- end ROW -->
+
+    @*</div>*@ <!-- end CONTAINER  -->
+
+    <!-- Copyrights -->
+    @*<div class="footer-copyright text-center py-3">
+        <a class="text-success" href="https://google.com"> <strong>Gaston Ponce</strong></a>
+    </div>*@
+    <!-- Copyrights -->
+
+@*</footer>*@
+
+<div class="fontawesome">
+    <script src="https://kit.fontawesome.com/1beb06eb04.js" crossorigin="anonymous"></script>
+</div>

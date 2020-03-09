@@ -8,3 +8,7 @@
 .container {
     /*margin: 0 auto;*/
 }
+
+.grandpasider .parentsidebar .sidebar {
+    height: 500px;
+}
