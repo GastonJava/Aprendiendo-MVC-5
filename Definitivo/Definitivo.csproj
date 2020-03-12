@@ -5,8 +5,16 @@
     <UserSecretsId>aspnet-Definitivo-025F4F41-63F4-4609-98D9-74077F09A799</UserSecretsId>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Remove="Views\Inicio\dist\**" />
+    <Content Remove="Views\Inicio\dist\**" />
+    <EmbeddedResource Remove="Views\Inicio\dist\**" />
+    <None Remove="Views\Inicio\dist\**" />
+  </ItemGroup>
+
 
   <ItemGroup>
+    <PackageReference Include="LanguageExt.Core" Version="3.4.12" />
     <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="3.1.0" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.0" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="3.1.0" />

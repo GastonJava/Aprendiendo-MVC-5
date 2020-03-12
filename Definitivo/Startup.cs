@@ -26,6 +26,8 @@ namespace Definitivo
             // refresh paginas
             services.AddRazorPages().AddRazorRuntimeCompilation();
 
+            
+
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(
                     Configuration.GetConnectionString("DefaultConnection")));
@@ -45,13 +47,14 @@ namespace Definitivo
                 }).AddEntityFrameworkStores<ApplicationDbContext>();
 
             services.AddControllersWithViews();
-            services.AddRazorPages();
+            //services.AddRazorPages();
 
             services.AddMvc(
                 config =>
                {
                    var policy = new AuthorizationPolicyBuilder().RequireAuthenticatedUser().Build();
                    config.Filters.Add(new AuthorizeFilter(policy));
+
                }).AddXmlSerializerFormatters();
         }
 
@@ -81,6 +84,8 @@ namespace Definitivo
 
             app.UseAuthentication();
             app.UseAuthorization();
+
+           
 
             app.UseEndpoints(endpoints =>
             {
