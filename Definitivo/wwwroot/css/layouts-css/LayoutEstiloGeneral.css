@@ -43,3 +43,12 @@
 span {
     width: 50px;
 }
+
+/* Estilo de footer Layout  */
+footer {
+    max-height: 100%;
+}
+
+.container-foot {
+    height: 80px;
+}
