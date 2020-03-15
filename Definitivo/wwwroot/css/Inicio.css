@@ -1,9 +1,74 @@
-﻿body {
+﻿
+/* Setup icons items */
+
+.material-icons {
+    /*font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 10px; /* Preferred icon size */
+    /*display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;*/
+    /* Support for all WebKit browsers. */
+    /*-webkit-font-smoothing: antialiased;*/
+    /* Support for Safari and Chrome. */
+    /*text-rendering: optimizeLegibility;*/
+    /* Support for Firefox. */
+    /*-moz-osx-font-smoothing: grayscale;*/
+    /* Support for IE. */
+    /*font-feature-settings: 'liga';*/
+}
+
+    .material-icons.md-18 {
+        font-size: 18px;
+    }
+
+    .material-icons.md-24 {
+        font-size: 24px;
+    }
+
+    .material-icons.md-36 {
+        font-size: 36px;
+    }
+
+    .material-icons.md-48 {
+        font-size: 48px;
+    }
+
+
+    /* Rules for using icons as black on a light background. */
+    .material-icons.md-dark {
+        color: rgba(0, 0, 0, 0.54);
+    }
+
+        .material-icons.md-dark.md-inactive {
+            color: rgba(0, 0, 0, 0.26);
+        }
+
+
+    /* Rules for using icons as white on a dark background. */
+    .material-icons.md-light {
+        color: rgba(255, 255, 255, 1);
+    }
+
+        .material-icons.md-light.md-inactive {
+            color: rgba(255, 255, 255, 0.3);
+        }
+
+
+
+body {
     font-family: 'Indie Flower', cursive;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
+
+
 
 .container {
     /*margin: 0 auto;*/
@@ -26,6 +91,15 @@
 
 .of {
     object-fit: cover;
+    opacity: 0.5;
+}
+
+img {
+    
+}
+
+.text-lor {
+    color: white;
 }
 
 /*.padre-text-enimg {
@@ -60,23 +134,31 @@
    opacity: 1;
 }
 
-.overlay span {
-    position: absolute;
-    top: 50%;
-    left: 30%;
-    transform: translate(-50%, -50%);
+.overlay, .texto-color {
+    /*position: absolute;*/
+    /*top: 50%;
+    left: 30%;*/
+    /*transform: translate(-50%, -50%);*/
     color: #fff;
     width: 300px;
 }
 
 #seccion {
     animation-delay: 0s;
-    animation-duration: 2s;
+    animation-duration: 3s;
     animation-iteration-count: 1;
 }
 
-$seccion2 {
-    animation-delay: 2s;
+#seccion2 {
+    animation-delay: 0s;
     animation-duration: 4s;
     animation-iteration-count: 1;
+}
+
+section {
+    background-color: #5b5b5b;
+}
+
+.web2 {
+    color: #212529;
 }
