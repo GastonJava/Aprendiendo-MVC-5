@@ -1,29 +1,310 @@
 ﻿
-/* Setup icons items */
+/*Extra small devices (portrait phones, less than 576px)*/
+@media (max-width: 575.98px) {
 
-.material-icons {
-    /*font-family: 'Material Icons';
-    font-weight: normal;
-    font-style: normal;
-    font-size: 10px; /* Preferred icon size */
-    /*display: inline-block;
-    line-height: 1;
-    text-transform: none;
-    letter-spacing: normal;
-    word-wrap: normal;
-    white-space: nowrap;
-    direction: ltr;*/
-    /* Support for all WebKit browsers. */
-    /*-webkit-font-smoothing: antialiased;*/
-    /* Support for Safari and Chrome. */
-    /*text-rendering: optimizeLegibility;*/
-    /* Support for Firefox. */
-    /*-moz-osx-font-smoothing: grayscale;*/
-    /* Support for IE. */
-    /*font-feature-settings: 'liga';*/
+    body {
+        font-family: 'Inconsolata', monospace;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-size: 10px;
+    }
+
+    .of {
+        object-fit: cover;
+        opacity: 0.5;
+    }
+
+    .chicapintada {
+        width: 100px;
+    }
+
+    .text-lor {
+        color: white;
+
+    }
+
+    .imgtext {
+        justify-content: space-around;
+        align-items: center;
+    }
+
+
+    .img-container {
+        position: relative;
+        display: inline-block;
+    }
+
+        .img-container .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            /*background: rgb(0, 170, 170);*/
+            background: rgb(91, 91, 91);
+            opacity: 0;
+            transition: opacity 500ms ease-in-out;
+        }
+
+        .img-container:hover .overlay {
+            opacity: 1;
+        }
+
+    .overlay, .texto-color {
+        color: #fff;
+        width: 300px;
+    }
+
+    #seccion {
+        animation-delay: 0s;
+        animation-duration: 3s;
+        animation-iteration-count: 1;
+    }
+
+    .gast {
+        min-width: 100px;
+        max-height: 250px;
+        width: 200px;
+        height: 150px;
+    }
+
+    #seccion2 {
+        animation-delay: 0s;
+        animation-duration: 4s;
+        animation-iteration-count: 1;
+    }
+
+    section {
+        background-color: #5b5b5b;
+    }
+
+    .web2 {
+        color: #212529;
+    }
 }
 
-    .material-icons.md-18 {
+/*Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) and (max-width:767.98px) {
+
+    body {
+        font-family: 'Inconsolata', monospace;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-size: 10px;
+    }
+    
+    .of {
+        object-fit: cover;
+        opacity: 0.5;
+        width: 100%;
+    }
+
+    .chicapintada {
+        width: 70%;
+        max-width: 150px;
+    }
+
+    .responsive-pintada {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    img {
+    }
+
+    .text-lor {
+        color: white;
+        margin-left: 5px;
+        padding: 8px;
+    }
+
+    .img-container {
+        position: relative;
+        display: inline-block;
+        width: 100%;
+    }
+
+        .img-container .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            /*background: rgb(0, 170, 170);*/
+            background: rgb(91, 91, 91);
+            opacity: 0;
+            transition: opacity 500ms ease-in-out;
+        }
+
+        .img-container:hover .overlay {
+            opacity: 1;
+        }
+
+    /* padding lenguajes */
+    .colum5 {
+        padding: 15px;
+    }
+
+    .overlay, .texto-color {
+        color: #fff;
+        width: 300px;
+    }
+
+    #seccion {
+        animation-delay: 0s;
+        animation-duration: 3s;
+        animation-iteration-count: 1;
+    }
+
+    #seccion2 {
+        animation-delay: 0s;
+        animation-duration: 4s;
+        animation-iteration-count: 1;
+    }
+
+    section {
+        background-color: #5b5b5b;
+    }
+
+    .web2 {
+        color: #212529;
+    }
+
+    .gast {
+        width: 200px;
+        height: 200px;
+        max-height: 200px;
+    }
+
+    figure {
+    }
+
+    .padding-img {
+        padding: 5px;
+    }
+
+    .responsive-header-img {
+        display: flex;
+        justify-content: space-around;
+    }
+}
+
+
+/*Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) and (max-width: 991.98px) {
+
+    body {
+        font-family: 'Indie Flower', cursive;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      
+    }
+
+    .of {
+        object-fit: cover;
+        opacity: 0.5;
+        width: 100%;
+    }
+
+    .chicapintada {
+        margin-top: 60px;
+        max-width: 150px;
+    }
+
+    .responsive-pintada {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    img {
+    }
+
+    .text-lor {
+        color: white;
+        margin-left: 5px;
+        padding: 8px;
+    }
+
+    .img-container {
+        position: relative;
+        display: inline-block;
+        width: 100%;
+    }
+
+        .img-container .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            /*background: rgb(0, 170, 170);*/
+            background: rgb(91, 91, 91);
+            opacity: 0;
+            transition: opacity 500ms ease-in-out;
+        }
+
+        .img-container:hover .overlay {
+            opacity: 1;
+        }
+
+    /* padding lenguajes */
+    .colum5 {
+        padding: 15px;
+    }
+
+    .overlay, .texto-color {
+        color: #fff;
+        width: 300px;
+    }
+
+    #seccion {
+        animation-delay: 0s;
+        animation-duration: 3s;
+        animation-iteration-count: 1;
+    }
+
+    #seccion2 {
+        animation-delay: 0s;
+        animation-duration: 4s;
+        animation-iteration-count: 1;
+    }
+
+    section {
+        background-color: #5b5b5b;
+    }
+
+    .web2 {
+        color: #212529;
+    }
+
+    .gast {
+        width: 200px;
+        height: 200px;
+        max-height: 200px;
+    }
+
+    figure {
+    }
+
+    .padding-img {
+        padding: 5px;
+    }
+
+    .responsive-header-img {
+        display: flex;
+        justify-content: space-around;
+    }
+}
+
+/*Large devices (desktops, 992px and up)*/ /*ORIGINAL*/
+@media (min-width: 992px) and (max-width: 1199.98px) {
+
+    /*.material-icons.md-18 {
         font-size: 18px;
     }
 
@@ -37,128 +318,307 @@
 
     .material-icons.md-48 {
         font-size: 48px;
-    }
+    }*/
 
 
     /* Rules for using icons as black on a light background. */
-    .material-icons.md-dark {
+    /*.material-icons.md-dark {
         color: rgba(0, 0, 0, 0.54);
     }
 
         .material-icons.md-dark.md-inactive {
             color: rgba(0, 0, 0, 0.26);
-        }
+        }*/
 
 
     /* Rules for using icons as white on a dark background. */
-    .material-icons.md-light {
+    /*.material-icons.md-light {
         color: rgba(255, 255, 255, 1);
     }
 
         .material-icons.md-light.md-inactive {
             color: rgba(255, 255, 255, 0.3);
-        }
+        }*/
 
-
-
-body {
-    font-family: 'Indie Flower', cursive;
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-
-
-.container {
-    /*margin: 0 auto;*/
-}
-
-.grandpasider .parentsidebar .sidebar {
-    /*height: 500px;*/
-}
-
-/*.container-fluid, .jumbotron-fluid {
-    height: 300px;
-}*/
-
-
-.jumbotron-fluid {
-    /*height: 300px;
-    background-color: green;*/
-}
-
-
-.of {
-    object-fit: cover;
-    opacity: 0.5;
-}
-
-img {
-    
-}
-
-.text-lor {
-    color: white;
-}
-
-/*.padre-text-enimg {
-    padding: 5px;
-    position: absolute;
-    margin-left: 150px;
-    margin-top:  180px;
-}
-.text-enimg {
-    margin-top: 100px;
-    color: red;
-}*/
-
-.img-container {
-    position: relative;
-    display: inline-block;
-}
-
-    .img-container .overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        /*background: rgb(0, 170, 170);*/
-        background: rgb(91, 91, 91);
-        opacity: 0;
-        transition: opacity 500ms ease-in-out;
+    /*body {
+        font-family: 'Indie Flower', cursive;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
     }
 
-.img-container:hover .overlay {
-   opacity: 1;
+    .of {
+        object-fit: cover;
+        opacity: 0.5;
+        width: 100%;
+    }
+
+    .chicapintada {
+        margin-top: 60px;
+        max-width: 150px;
+    }
+
+    img {
+    }
+
+    .text-lor {
+        color: white;
+        margin-left: 5px;
+        padding: 8px;
+    }*/
+
+    /*.img-container {
+        position: relative;
+        display: inline-block;
+        width: 100%;
+    }*/
+
+        /*.img-container .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;*/
+
+            /*background: rgb(0, 170, 170);*/
+
+            /*background: rgb(91, 91, 91);
+            opacity: 0;
+            transition: opacity 500ms ease-in-out;
+        }*/
+
+        /*.img-container:hover .overlay {
+            opacity: 1;
+        }*/
+
+    /* padding lenguajes */
+    /*.colum5 {
+        padding: 15px;
+    }
+
+    .overlay, .texto-color {
+        color: #fff;
+        width: 300px;
+    }
+
+    #seccion {
+        animation-delay: 0s;
+        animation-duration: 3s;
+        animation-iteration-count: 1;
+    }
+
+    #seccion2 {
+        animation-delay: 0s;
+        animation-duration: 4s;
+        animation-iteration-count: 1;
+    }
+
+    section {
+        background-color: #5b5b5b;
+    }
+
+    .web2 {
+        color: #212529;
+    }
+
+    .gast {
+        width: 200px;
+        height: 200px;
+        max-height: 300px;
+    }*/
 }
 
-.overlay, .texto-color {
-    /*position: absolute;*/
-    /*top: 50%;
-    left: 30%;*/
-    /*transform: translate(-50%, -50%);*/
-    color: #fff;
-    width: 300px;
+/*Large devices (desktops, 992px and up)*/ /*TESTING*/
+@media (min-width: 992px) and (max-width: 1199.98px) {
+
+   
+    body {
+        font-family: 'Indie Flower', cursive;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+
+        
+    }
+
+    .of {
+        object-fit: cover;
+        opacity: 0.5;
+        width: 100%;
+    }
+
+    .chicapintada {
+        margin-top: 60px;
+        max-width: 150px;
+    }
+
+    img {
+    }
+
+    .text-lor {
+        color: white;
+        margin-left: 5px;
+        padding: 8px;
+    }
+
+    .img-container {
+        position: relative;
+        display: inline-block;
+        width: 100%;
+    }
+
+        .img-container .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            /*background: rgb(0, 170, 170);*/
+            background: rgb(91, 91, 91);
+            opacity: 0;
+            transition: opacity 500ms ease-in-out;
+        }
+
+        .img-container:hover .overlay {
+            opacity: 1;
+        }
+
+    /* padding lenguajes */
+    .colum5 {
+        padding: 15px;
+    }
+
+    .overlay, .texto-color {
+        color: #fff;
+        width: 300px;
+    }
+
+    #seccion {
+        animation-delay: 0s;
+        animation-duration: 3s;
+        animation-iteration-count: 1;
+    }
+
+    #seccion2 {
+        animation-delay: 0s;
+        animation-duration: 4s;
+        animation-iteration-count: 1;
+    }
+
+    section {
+        background-color: #5b5b5b;
+    }
+
+    .web2 {
+        color: #212529;
+    }
+
+    .gast {
+        width: 200px;
+        height: 200px;
+        max-height: 200px;
+    }
+
+    figure {
+
+    }
+
+    .padding-img {
+        padding: 5px;
+    }
 }
 
-#seccion {
-    animation-delay: 0s;
-    animation-duration: 3s;
-    animation-iteration-count: 1;
-}
 
-#seccion2 {
-    animation-delay: 0s;
-    animation-duration: 4s;
-    animation-iteration-count: 1;
-}
 
-section {
-    background-color: #5b5b5b;
-}
 
-.web2 {
-    color: #212529;
+/*Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px ) and (-webkit-min-device-pixel-ratio:0) {
+
+    body {
+        font-family: 'Indie Flower', cursive;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    .of {
+        object-fit: fill;
+        opacity: 0.5;
+        width: 100%;
+    }
+
+    .chicapintada {
+        margin-top:60px;
+        max-width: 150px;
+    }
+
+    img {
+    }
+
+    .text-lor {
+        color: white;
+        margin-left: 5px;
+        padding: 8px;
+    }
+
+    .img-container {
+        position: relative;
+        /*display: inline-block;*/
+        width:100%;
+    }
+
+        .img-container .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            /*background: rgb(0, 170, 170);*/
+            background: rgb(91, 91, 91);
+            opacity: 0;
+            transition: opacity 500ms ease-in-out;
+        }
+
+        .img-container:hover .overlay {
+            opacity: 1;
+        }
+
+    /* padding lenguajes */
+    .colum5 {
+        padding: 15px;
+    }
+
+    .overlay, .texto-color {
+        color: #fff;
+        width: 300px;
+    }
+
+    #seccion {
+        animation-delay: 0s;
+        animation-duration: 3s;
+        animation-iteration-count: 1;
+    }
+
+    #seccion2 {
+        animation-delay: 0s;
+        animation-duration: 4s;
+        animation-iteration-count: 1;
+    }
+
+    section {
+        background-color: #5b5b5b;
+    }
+
+    .web2 {
+        color: #212529;
+    }
+
+    .gast {
+        width: 100%;
+        max-height: 300px;
+    }
+
+    .padding-img {
+        padding: 5px;
+    }
 }

@@ -25,6 +25,9 @@
         <!-- Google Fonts Roboto -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
 
+        <!-- Google Fonts inconsolata -->
+        <link href="https://fonts.googleapis.com/css?family=Inconsolata&display=swap" rel="stylesheet">
+
         <!-- Material Design Bootstrap -->
         <link href="css/mdb-free.min.css" rel="stylesheet">
 
@@ -39,25 +42,29 @@
         @* estilos personalizado para los layouts en general *@
         <link href="~/css/layouts-css/LayoutEstiloGeneral.css" rel="stylesheet" />
 
+        @* esto es para configurar el layout inicio.cshtml *@
+        <link href="~/css/footer-inicio.css" rel="stylesheet" />
+
 
     </head>
 
   
 
+  
         <!-- Navbar origin -->
         <nav class="navbar navbar-expand-md sticky-top scrolling-navbar bg-dark navbar-dark">
-            <div class="container" >
+            <div class="container">
                 <a class="navbar-brand" asp-controller="Inicio" asp-action="Inicio">Poligato icon</a>
 
                 <button aria-controls="desplegar" aria-expanded="false" aria-label="Toggle navigation"
-                class="navbar-toggler" data-target="#desplegar" data-toggle="collapse" type="button">
+                        class="navbar-toggler" data-target="#desplegar" data-toggle="collapse" type="button">
 
-                   <span class="navbar-toggler-icon"></span>
+                    <span class="navbar-toggler-icon"></span>
 
                 </button>
 
                 <div class="collapse navbar-collapse" id="desplegar">
-                    <ul class="navbar-nav mr-auto smooth-scroll" >
+                    <ul class="navbar-nav mr-auto smooth-scroll">
                         <li class="nav-item">
                             <a class="nav-link" asp-controller="Account" asp-action="Login">
                                 Iniciar Session
@@ -78,7 +85,7 @@
 
                     </ul>
 
-                    
+
                     <ul class="navbar-nav nav-flex-icons">
                         <li class="nav-item">
                             <a class="nav-link">
@@ -100,6 +107,7 @@
             </div>
         </nav>
         <!-- Navbar -->
+        
 
 
     
@@ -114,9 +122,9 @@
 
 <footer class="footer font-small bg-dark p-5">
 
-    <div class="container-foot container-fluid text-center text-md-left animated slideInRight delay-1s">
+    <div class="container-foot container-fluid text-center text-md-left text-leftt  animated slideInRight delay-1s">
 
-        <div class="row">
+        <div class="row ">
 
             <div class="col-md-6 mt-md-0 mt-1 text-white-50">
 
@@ -134,7 +142,7 @@
             <hr class="clearfix w-100 d-md-none pb-3" />
 
 
-            <div class="col-md-3 mb-md-0 mb-1 text-white-50">
+            <div class="col-md-3  mb-md-0 mb-1 text-white-50">
 
                 <h5 class="text-uppercase">
                     Enlace 1

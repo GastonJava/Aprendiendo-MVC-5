@@ -50,5 +50,12 @@ footer {
 }
 
 .container-foot {
-    height: 80px;
+    /*height: 80px;*/
+}
+
+@media (min-width: 575.98px) {
+
+    footer .text-leftt {
+        text-align: left;
+    }
 }
