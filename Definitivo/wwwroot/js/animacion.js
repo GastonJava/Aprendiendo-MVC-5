@@ -9,20 +9,29 @@ $(function () {
     //AL PASAR MOUSE POR ELEMENTO "ID SECCION" 
     //llama al metodo animate pasandle el elemento y el efecto
     $('#seccion').mouseover(function () {
-        //alert("boton funcionando");
-        animate('#seccion', 'flipInX');
-        //animate('#seccion2', 'slideInLeft');
-        animate('#seccion2', 'zoomIn');
+        
+        animate('#seccion', 'zoomIn');
+        
         return false;
     });
 
-    //$('#animateBtn2').click(function () {
-    //    animate('header', 'slideOutUp');
-    //    setTimeout(function () {
-    //        $('header').css('visibility', 'hidden');
-    //    }, 1000);
-    //    return false;
-    //});
+    $('#seccion2').mouseover(function () {
+        animate('#seccion2', 'zoomIn');
+
+        return false;
+
+    });
+
+    $('#seccion3').mouseover(function () {
+        animate('#seccion3', 'zoomIn');
+
+        //setTimeout(function () {
+        //    $('img').css('visibility', 'hidden');
+        //}, 2000)
+        return false;
+    });
+
+
 
     // Animate
     function animate(element, efecto) {
@@ -34,4 +43,9 @@ $(function () {
             $(element).removeClass('animated ' + efecto);
         }, 2000);
     }
+})
+
+$(function () {
+
+
 })

@@ -37,7 +37,20 @@
 
 .navbar {
 
-    height:90px;
+    /*height:90px;*/
+}
+
+.collapse {
+    /*background-color: #212529;
+    padding: 10px;
+    width: 30%;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+    border-top: 1px solid transparent;*/
+}
+
+.navbar-nav {
+    
+    color: red;
 }
 
 span {

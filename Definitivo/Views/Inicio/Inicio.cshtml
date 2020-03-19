@@ -19,7 +19,7 @@
 
             <div class="responsive-header-img overlay d-flex justify-content-around ">
 
-                <div class="col-lg-4 col-sm-4 d-flex flex-column text-color responsive-pintada justify-content-lg-around align-items-lg-center imgtext bg-danger">
+                <div class="col-lg-4 col-sm-4 d-flex flex-column text-color responsive-pintada justify-content-lg-around align-items-lg-center imgtext">
 
                     <img src="~/imagenes/chicapintada.jpg" class="img-thumbnail rounded-circle chicapintada" />
 
@@ -59,98 +59,48 @@
 </div>
 
 <div class="container-fluid" id="seccion1">
-    <div class=" row text-center">
+    <div class="row text-center" style="background-color:#5b5b5b;">
 
-        <div class="col figure bg-danger padding-img">
-            <img src="~/imagenes/ahora.jpg" alt="no pasaras foto" class="figure-img gast" id="seccion" />
+        <div class="col figure padding-img">
+            <img src="~/imagenes/ahora.jpg" alt="no pasaras foto" class="figure-img gast" id="seccion"/>
             <figcaption class="figure-caption">
                 imagen numero 1 es la primer imagen
             </figcaption>
         </div>
 
-        <div class="col figure bg-info padding-img">
-            <img src="~/imagenes/ahora2.jpg" alt="no pasaras foto" class="figure-img gast" id="seccion" />
+        <div class="col figure padding-img">
+            <img src="~/imagenes/ahora2.jpg" alt="no pasaras foto" class="figure-img gast" id="seccion2"/>
             <figcaption class="figure-caption">
                 imagen numero 2 es la primer imagen
             </figcaption>
 
         </div>
 
-        <div class="col figure bg-light padding-img">
-            <img src="~/imagenes/white-house.jpg" alt="casa blanca" class="figure-img gast" id="seccion"/>
+        <div class="col figure padding-img">
+            <img src="~/imagenes/white-house.jpg" alt="casa blanca" class="figure-img gast" id="seccion3"/>
             <figcaption class="figure-caption">
                 imagen numero 3 es la primer imagen
             </figcaption>
         </div>
 
-        @*<div class="col figure bg-success padding-img">
-            <img src="~/imagenes/do not enter.jpg" alt="no pasaras foto" class="figure-img gast" id="seccion" />
-            <figcaption class="figure-caption">
-                imagen numero 1 es la primer imagen
-            </figcaption>
-        </div>*@
+        
     </div>
 
 </div>
-
-
-
-
-
-@*<section id="seccion1" class="container-fluid">
-
-    <div class="row col-sm-12">
-
-
-        <figure class="figure animated bounceInDown delay-1s bg-danger">
-            <img src="~/imagenes/ahora.jpg" alt="no pasaras foto" class="figure-img gast" id="seccion" />
-            <figcaption class="figure-caption">
-                imagen numero 1 es la primer imagen
-            </figcaption>
-
-        </figure>
-
-        <figure class="figure animated bounceInDown delay-1s bg-light">
-            <img src="~/imagenes/ahora2.jpg" alt="no pasaras foto" class="figure-img gast" id="seccion" />
-            <figcaption class="figure-caption">
-                imagen numero 2 es la segunda imagen
-            </figcaption>
-
-        </figure>
-
-        <figure class="figure animated bounceInDown delay-1s bg-info">
-            <img src="~/imagenes/fondogym.jpg" alt="no pasaras foto" class="figure-img gast" id="seccion" />
-            <figcaption class="figure-caption">
-                imagen numero 3 es la tercer imagen
-            </figcaption>
-
-        </figure>
-
-        <figure class="figure animated bounceInDown delay-1s bg-primary">
-            <img src="~/imagenes/do not enter.jpg" alt="no pasaras foto" class="figure-img gast" id="seccion" />
-            <figcaption class="figure-caption">
-                imagen numero 4 es la cuarta imagen
-            </figcaption>
-
-        </figure>
-
-    </div>
-</section>*@
-
 
 
 <section class="container-fluid">
 
     <div class="textos row p-2 d-flex justify-content-around text-center ">
 
-        <div class="col-5 animated lightSpeedIn delay-1s">
+        <div class="col-5 animated lightSpeedIn delay-0s">
             @* animated lightSpeedIn delay-1s *@
 
             <h3 class="text-muted">Otras Nuevas secciones web 1</h3>
 
         </div>
 
-        <div class="web2 col-5 animated lightSpeedIn delay-2s">
+        <div class="web2 col-5 animated lightSpeedIn delay-1s">
             <!-- animated lightSpeedIn delay-2s -->
             <h3 class="text-muted">Otras Nuevas secciones web 2</h3>
         </div>
@@ -171,4 +121,6 @@
 @* animaciones jquery *@
 <div class="animaciones">
     <script src="~/js/animacion.js"></script>
+
+    <script src="~/js/scrollingDetection.js"></script>
 </div>

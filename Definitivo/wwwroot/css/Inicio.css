@@ -58,15 +58,8 @@
 
     #seccion {
         animation-delay: 0s;
-        animation-duration: 3s;
+        animation-duration: 1s;
         animation-iteration-count: 1;
-    }
-
-    .gast {
-        min-width: 100px;
-        max-height: 250px;
-        width: 200px;
-        height: 150px;
     }
 
     #seccion2 {
@@ -75,12 +68,31 @@
         animation-iteration-count: 1;
     }
 
+    #seccion3 {
+        animation-delay: 0s;
+        animation-duration:4s;
+        animation-iteration-count: 1;
+    }
+
     section {
         background-color: #5b5b5b;
     }
 
+    .gast {
+        min-width: 100px;
+        max-height: 250px;
+        width: 200px;
+        height: 150px;
+       
+    }
+
     .web2 {
         color: #212529;
+    }
+
+    .padding-img {
+
+        padding: 10px;
     }
 }
 
