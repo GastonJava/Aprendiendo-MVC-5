@@ -633,4 +633,9 @@
     .padding-img {
         padding: 5px;
     }
+
+    .test {
+        background-color: red;
+        width: 500px;
+    }
 }

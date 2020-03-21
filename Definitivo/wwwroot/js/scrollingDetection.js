@@ -4,10 +4,10 @@
 
 $(document).ready(function() {
         $(window).scroll(function () {
-            if ($(document).scrollTop() > 50) {
-                $("p").addClass("test");
+            if ($(document).scrollTop() > 250) {
+                $("h3").addClass("test");
             } else {
-                $("p").removeClass("test");
+                $("h3").removeClass("test");
             }
         });
 });

@@ -110,8 +110,6 @@
         
 
 
-    
-
 <div>
     @RenderBody()
     @*@IgnoreBody()*@
@@ -167,6 +165,43 @@
         </div> <!-- end ROW -->
 
     </div> <!-- end CONTAINER  -->
+
+    <script>
+        $(window).scroll(function () {
+
+            //var scrolled_val = Math.round(window.scrollY);
+            ////alert(scrolled_val);
+            //console.log(scrolled_val);
+            //alert(scrolled_val);
+
+
+            if ($(document).scrollTop() > 550) {
+                $(".list-unstyled").addClass("test");
+
+                animate('.container-foot', 'zoomIn');
+
+                return false;
+
+
+            } else {
+                $(".list-unstyled").removeClass("test");
+            }
+
+
+        });
+
+
+        // Animate
+        function animate(element, efecto) {
+            $(element).addClass('animated ' + efecto);
+
+            //al pasar 3 segundos
+            var wait = setTimeout(function () {
+                $(element).removeClass('animated ' + efecto);
+            }, 2000);
+        }
+
+    </script>
 
     <!-- Copyrights -->
 
