@@ -605,6 +605,8 @@
         width: 300px;
     }
 
+    
+
     #seccion {
         animation-delay: 0s;
         animation-duration: 3s;
@@ -613,12 +615,28 @@
 
     #seccion2 {
         animation-delay: 0s;
+        animation-duration: 3s;
+        animation-iteration-count: 1;
+    }
+
+    #seccion3 {
+        animation-delay: 0s;
+        animation-duration: 3s;
+        animation-iteration-count: 1;
+    }
+
+    #seccion-desarrollo {
+        animation-delay: 0s;
         animation-duration: 4s;
         animation-iteration-count: 1;
     }
 
+
+
     section {
         background-color: #5b5b5b;
+        /*height:200px;*/
+
     }
 
     .web2 {
@@ -627,15 +645,38 @@
 
     .gast {
         width: 100%;
-        max-height: 300px;
+        height: 100%;
+        max-height: 350px;
     }
 
     .padding-img {
-        padding: 5px;
+        padding: 3px;
     }
 
     .test {
         background-color: red;
         width: 500px;
+    }
+
+    test2 {
+        background-color: blue;
+        width: 300px;
+    }
+
+    .card {
+        height: 300px;
+        max-height: 350px;
+    }
+
+    .img {
+        width: 30%;
+        /*position: absolute;*/
+        height: 20%;
+        
+    }
+
+    .height-complete {
+        
+        /*height: 600px;*/
     }
 }

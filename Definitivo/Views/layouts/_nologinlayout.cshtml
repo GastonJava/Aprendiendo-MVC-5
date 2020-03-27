@@ -54,7 +54,7 @@
         <!-- Navbar origin -->
         <nav class="navbar navbar-expand-md navbar-expand-sm sticky-top scrolling-navbar bg-dark navbar-dark">
             <div class="container">
-                <a class="navbar-brand" asp-controller="Inicio" asp-action="Inicio">Poligato icon</a>
+                <a class="navbar-brand" asp-controller="Inicio" asp-action="Inicio"><img src="~/imagenes/fuego.png" alt="Poligato Logo" width="75" height="75" /></a>
 
                 <button aria-controls="desplegar" aria-expanded="false" aria-label="Toggle navigation"
                         class="navbar-toggler" data-target="#desplegar" data-toggle="collapse" type="button">
@@ -169,29 +169,37 @@
     <script>
         $(window).scroll(function () {
 
-            //var scrolled_val = Math.round(window.scrollY);
-            ////alert(scrolled_val);
-            //console.log(scrolled_val);
+            var scrolled_val = Math.round(window.scrollY);
+            //alert(scrolled_val);
+            console.log(scrolled_val);
             //alert(scrolled_val);
 
+            if ($(document).scrollTop() > 840 && $(document).scrollTop() < 940) {
 
-            if ($(document).scrollTop() > 550) {
-                $(".list-unstyled").addClass("test");
+                animate('#seccion-desarrollo1', 'jackInTheBox');
 
-                animate('.container-foot', 'zoomIn');
+                animate('#seccion-desarrollo2', 'jackInTheBox');
 
-                return false;
-
-
-            } else {
-                $(".list-unstyled").removeClass("test");
+                ('p').addClass('test2');
             }
+
+            //if ($(document).scrollTop() > 650) {
+            //    //$(".list-unstyled").addClass("test");
+
+            //    animate('.container-foot', 'zoomIn');
+
+            //    return false;
+
+
+            //} else {
+            //    //$(".list-unstyled").removeClass("test");
+            //}
 
 
         });
 
 
-        // Animate
+         Animate
         function animate(element, efecto) {
             $(element).addClass('animated ' + efecto);
 

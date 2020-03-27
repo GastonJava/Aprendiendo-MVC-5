@@ -26,7 +26,7 @@ namespace Definitivo
             // refresh paginas
             services.AddRazorPages().AddRazorRuntimeCompilation();
 
-            
+
 
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(
@@ -85,7 +85,7 @@ namespace Definitivo
             app.UseAuthentication();
             app.UseAuthorization();
 
-           
+
 
             app.UseEndpoints(endpoints =>
             {
