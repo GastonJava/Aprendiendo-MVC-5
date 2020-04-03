@@ -1,9 +1,9 @@
-﻿@{
-    ViewData["Title"] = "Usuarios no logeados";
+﻿         @{
+            ViewData["Title"] = "Usuarios no logeados";
 
-}
+        }
 
-@* Este layout tiene el navbar y footer *@
+        @* Este layout tiene el navbar y footer *@
 
 
     <head>
@@ -32,6 +32,7 @@
         <link href="css/mdb-free.min.css" rel="stylesheet">
 
         @* fontAwesome *@
+
         @*<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">*@
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
@@ -45,129 +46,127 @@
         @* esto es para configurar el layout inicio.cshtml *@
         <link href="~/css/footer-inicio.css" rel="stylesheet" />
 
+        <link href="~/css/Inicio.css" rel="stylesheet" />
 
     </head>
-
-  
-
   
         <!-- Navbar origin -->
-        <nav class="navbar navbar-expand-md navbar-expand-sm sticky-top scrolling-navbar bg-dark navbar-dark">
-            <div class="container">
+        <nav class="navbar navbar-dark navbar-expand-md navbar-expand-sm sticky-top scrolling-navbar bg-dark shadow">
+            <div class="container-fluid">
                 <a class="navbar-brand" asp-controller="Inicio" asp-action="Inicio"><img src="~/imagenes/fuego.png" alt="Poligato Logo" width="75" height="75" /></a>
 
                 <button aria-controls="desplegar" aria-expanded="false" aria-label="Toggle navigation"
-                        class="navbar-toggler" data-target="#desplegar" data-toggle="collapse" type="button">
+                class="navbar-toggler" data-target="#desplegar" data-toggle="collapse" type="button">
 
-                    <span class="navbar-toggler-icon"></span>
+                     <span class="navbar-toggler-icon"></span>
 
                 </button>
 
                 <div class="collapse navbar-collapse" id="desplegar">
-                    <ul class="navbar-nav mr-auto smooth-scroll">
-                        <li class="nav-item">
-                            <a class="nav-link" asp-controller="Account" asp-action="Login">
-                                Iniciar Session
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" asp-controller="Account" asp-action="Registrar">Eres Nuevo?</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#projecto" data-offset="90">Projectos</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#galeria" data-offset="90">Galeria</a>
-                        </li>
-                        <li>
-                            <a class="nav-link" href="#contacto" data-offset="90">Contacto</a>
-                        </li>
+                            <ul class="navbar-nav mr-auto smooth-scroll">
+                            
+                                <li class="nav-item">
+                                    <a class="nav-link" asp-controller="Account" asp-action="Login">
+                                        Iniciar Session
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" asp-controller="Account" asp-action="Registrar">Eres Nuevo?</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#projecto" data-offset="90">Projectos</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#galeria"  data-offset="90">Galeria</a>
+                                </li>
+                                <li>
+                                    <a class="nav-link" href="#contacto" data-offset="90">Contacto</a>
+                                </li>
 
-                    </ul>
+                            </ul>
 
-
-                    <ul class="navbar-nav nav-flex-icons">
-                        <li class="nav-item">
-                            <a class="nav-link">
-                                <i class="fab fa-facebook light-green-text-2"></i>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="https://www.linkedin.com/in/dotnetgas/">
-                                <i class="fab fa-linkedin light-green-text-2"></i>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link">
-                                <i class="fab fa-instagram light-green-text-2"></i>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
+                            <ul class="navbar-nav nav-flex-icons">
+                                <li class="nav-item">
+                                    <a class="nav-link">
+                                        <i class="fab fa-facebook light-green-text-2"></i>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="https://www.linkedin.com/in/dotnetgas/">
+                                        <i class="fab fa-linkedin light-green-text-2"></i>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link">
+                                        <i class="fab fa-instagram light-green-text-2"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
             </div>
         </nav>
         <!-- Navbar -->
         
+    
+
+        <div>
+            @RenderBody()
+            @*@IgnoreBody()*@
+
+             @*@RenderSection("Footer", required: false)*@
+        </div>
 
 
-<div>
-    @RenderBody()
-    @*@IgnoreBody()*@
+        <footer class="footer font-small bg-dark p-3">
 
-    @*@RenderSection("Footer", required: false)*@
-</div>
+            <div class="container-foot container-fluid text-center text-md-left text-leftt  animated zoomIn delay-0s">
 
+                <div class="row ">
 
-<footer class="footer font-small bg-dark p-5">
+                    <div class="col-md-6 mt-md-0 mt-1 text-white-50">
 
-    <div class="container-foot container-fluid text-center text-md-left text-leftt  animated zoomIn delay-0s">
-
-        <div class="row ">
-
-            <div class="col-md-6 mt-md-0 mt-1 text-white-50">
-
-                <h5 class="text-uppercase ">Footer Contenido</h5>
-                <p>Organizamos nuestros contenidos</p>
+                        <h5 class="text-uppercase ">Footer Contenido</h5>
+                        <p>Organizamos nuestros contenidos</p>
               
-                <p>Direccion: <strong>Av. Siempre Viva 2039</strong><i class="fas fa-phone"></i></p>
+                        <p>Direccion: <strong>Av. Siempre Viva 2039</strong><i class="fas fa-phone"></i></p>
 
-                <p>Cuidad: <strong>Barrio New Manhattan</strong></p>
-                <p>Telefono: <strong>351-6789295</strong></p>
+                        <p>Cuidad: <strong>Barrio New Manhattan</strong></p>
+                        <p>Telefono: <strong>351-6789295</strong></p>
 
-            </div>
+                    </div>
 
-            <hr class="clearfix w-100 d-md-none pb-3" />
+                    <hr class="clearfix w-100 d-md-none pb-3" />
 
 
-            <div class="col-md-3  mb-md-0 mb-1 text-white-50">
+                    <div class="col-md-3  mb-md-0 mb-1 text-white-50">
 
-                <h5 class="text-uppercase">
-                    Enlace 1
-                </h5>
+                        <h5 class="text-uppercase">
+                        Enlace 1
+                        </h5>
 
-                <ul class="list-unstyled">
-                    <li><a href="#" class="text-white-50">Ir arriba</a></li>
-                    <li><a href="#" class="text-white-50">Link 2</a></li>
-                </ul>
-            </div>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white-50">Ir arriba</a></li>
+                        <li><a href="#" class="text-white-50">Link 2</a></li>
+                    </ul>
+                </div>
 
-            <div class="col-md-3 mb-md-0 mb-1 text-white-50">
-                <h5 class="text-uppercase">
+                <div class="col-md-3 mb-md-0 mb-1 text-white-50">
+                    <h5 class="text-uppercase">
                     Enlaces 2
-                </h5>
+                    </h5>
 
-                <ul class="list-unstyled">
-                    <li><a class="text-white-50" href="#">Link 1</a></li>
-                    <li><a class="text-white-50" href="#">Link 2</a></li>
-                </ul>
-            </div>
+                    <ul class="list-unstyled">
+                        <li><a class="text-white-50" href="#">Link 1</a></li>
+                        <li><a class="text-white-50" href="#">Link 2</a></li>
+                    </ul>
+                </div>
 
-        </div> <!-- end ROW -->
+            </div> <!-- end ROW -->
 
-    </div> <!-- end CONTAINER  -->
+            </div> <!-- end CONTAINER  -->
 
-    <script>
-        $(window).scroll(function () {
+             <script>
+            $(window).scroll(function () {
 
             var scrolled_val = Math.round(window.scrollY);
             //alert(scrolled_val);
@@ -183,43 +182,43 @@
                 ('p').addClass('test2');
             }
 
-            //if ($(document).scrollTop() > 650) {
-            //    //$(".list-unstyled").addClass("test");
+              //if ($(document).scrollTop() > 650) {
+              //    //$(".list-unstyled").addClass("test");
 
-            //    animate('.container-foot', 'zoomIn');
+              //    animate('.container-foot', 'zoomIn');
 
-            //    return false;
-
-
-            //} else {
-            //    //$(".list-unstyled").removeClass("test");
-            //}
+              //    return false;
 
 
-        });
+              //} else {
+              //    //$(".list-unstyled").removeClass("test");
+              //}
 
 
-         Animate
-        function animate(element, efecto) {
+            });
+
+
+            Animate
+            function animate(element, efecto) {
             $(element).addClass('animated ' + efecto);
 
             //al pasar 3 segundos
             var wait = setTimeout(function () {
                 $(element).removeClass('animated ' + efecto);
             }, 2000);
-        }
+            }
 
-    </script>
+            </script>
 
-    <!-- Copyrights -->
+             <!-- Copyrights -->
 
-    <div class="footer-copyright text-center py-3">
-        <a class="text-success" href="https://google.com"> <strong>Gaston Ponce</strong></a>
-    </div>
+             <div class="footer-copyright text-center py-3">
+                <a class="text-success" href="https://google.com"> <strong>Gaston Ponce</strong></a>
+            </div>
 
-    <!-- Copyrights -->
+            <!-- Copyrights -->
 
-</footer>
+        </footer>
 
 @* INICIO JAVASCRIPT MDBOOTSTRAP *@
 
@@ -233,3 +232,7 @@
 <script type="text/javascript" src="~/dist/js/mdb.min.js"></script> @*"js/mdb.min.js"*@
 
 @* FIN JAVASCRIPT MDBOOTSTRAP *@
+
+<div class="fontawesome">
+    <script src="https://kit.fontawesome.com/1beb06eb04.js" crossorigin="anonymous"></script>
+</div>

@@ -15,7 +15,7 @@
     }
 
     .container-fluid {
-        padding: 100px;
+        padding: 5px;
     }
 
     .backgroundimg {
@@ -39,6 +39,11 @@
         background: none;
     }
 
+    /*.picture {
+        width: 30%;
+        height: 100px;
+        max-height: 100px;
+    }*/
 
     /*.moverizq h2 {
         display: none;
@@ -54,7 +59,7 @@
     }
 
     .container-fluid {
-        padding: 100px;
+        padding: 5px;
     }
 
 
@@ -88,15 +93,18 @@
 
 /*.moverizq h2 {
         display: none;
-    }*/
+}*/
 
-}
 
 /* Large devices (desktops, 978px and up) */
 @media (min-width: 978px) {
     body {
         margin: 0px;
         box-sizing: border-box;
+    }
+
+    .container-fluid {
+        padding: 5px;
     }
 
     .container {
@@ -163,7 +171,7 @@
     }
 
     .jumbotron {
-        padding-top: 100px;
+        /*padding-top: 100px;*/
     }
 
     img {
@@ -175,4 +183,15 @@
         width: 50%;
     }
 
+    .container-fluid {
+        padding: 5px;
+    }
+
+    .footer {
+        
+    }
+
+    form {
+        height: auto;
+    }
 }

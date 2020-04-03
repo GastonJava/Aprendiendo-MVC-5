@@ -13,10 +13,9 @@
 
 <div class="container-fluid">
 
-    <h3 class="text-center align-content-center">Iniciar session </h3>
+    
     <div class="center-form">
 
-       
 
         <form class="border p-3 form justify-content-center" method="post" asp-controller="Account" asp-action="Login">
             <div class="form-group">
@@ -40,7 +39,14 @@
 
             <button class="btn btn-info" type="submit" value="Usuario">Enviar</button>
             @Html.ValidationSummary(true, "", new { @class = "alert-danger" });
+       
+        <div class="separation">
+            <h3 class="text-left align-content-center">Iniciar session </h3>
+        </div>
+            
         </form>
+
+        
     </div>
 
 </div>

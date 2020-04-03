@@ -3,7 +3,7 @@
 
 @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 
-<html>
+
 
 @*@{
   Layout = "~/Views/layouts/_LayoutAccount.cshtml";
@@ -30,90 +30,104 @@
     <title>Crear usuario nuevo</title>
 
 </head>
-<body>
 
 
-    <div class="container ">
 
-        <div class="jumbotron">
-            <div class="">
+    @*<div class="container-fluid">*@
 
-                <div class="d-xl-flex flex-row-reverse justify-content-between align-items-center">
+<div class="jumbotron">
+    @*<div class="">*@
 
-                    <div class="card h-100 p-4">
-                        <img src="~/imagenes/registrar.jpg" class="rounded-circle no-rounded" width="512" height="300"/>  @**@
+    <div class="d-xl-flex flex-row-reverse justify-content-around ">
+
+        <div class="card p-4">
+            <img src="~/imagenes/registrar.jpg" class="picture rounded-circle no-rounded" style="height: 100px;" />
+
+            <div class="text-center p-3">
+                <p class="small">asdasjdasjdaksdaskdasdkasdasdasd</p>
+                <p class="small">asdasdasjdnjk asjdk njaksndjk nk</p>
+                <p class="small">asdjnnnnasdjnj jnjds nnj  jnasd </p>
+            </div>
+
+        </div>
+
+        <form class="bg-danger border p-2" method="post" asp-controller="Account" asp-action="Registrar">
+            @*<div asp-validation-summary="All" class="text-danger"></div>*@
+
+            <div class="d-lg-flex text-center">
+
+                <div class="form-group p-2">
+                    <label asp-for="NombreUsuario">Username: <i class="fa fa-user"></i> </label>
+                    <input asp-for="NombreUsuario" class="form-control" placeholder="Ingresar usuario" />
+                    <span asp-validation-for="NombreUsuario" class="bg-danger"></span>
+                </div>
+
+                <div class="form-group p-2">
+                    <label asp-for="ApellidoUsuario">Apellido: <i class="fa fa-user"></i> </label>
+                    <input asp-for="ApellidoUsuario" class="form-control" placeholder="Ingresar Apellido" />
+                    <span asp-validation-for="ApellidoUsuario" class="bg-danger"></span>
+                </div>
+
+            </div>
+            
+
+            <div class="d-lg-flex text-center">
+
+                <div class="form-group p-2">
+                    <label asp-for="Email">Email: <i class="fa fa-mail-bulk"></i> </label>
+                    <input asp-for="Email" class="form-control" placeholder="Ingresar email" />
+                    <span asp-validation-for="Email" class="bg-danger"></span>
+                </div>
+
+                <div class="form-group p-2">
+                    <label asp-for="PasswordHash">Contraseña: <i class="fa fa-user-lock"></i></label>
+                    <input asp-for="PasswordHash" class="form-control" placeholder="Ingresar Contraseña" />
+                    <span asp-validation-for="PasswordHash" class="bg-danger"></span>
+                </div>
+
+            </div>
+
+            
+            <div class="bg-light p-lg-2">
+
+                <div class="row p-lg-4 d-lg-flex justify-content-around">
+
+                    <div class="custom-control custom-radio">
+                        <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input" checked>
+                        <label class="custom-control-label text-info" for="customRadio1">Administrador</label>
                     </div>
 
-                    <form class="border" method="post" asp-controller="Account" asp-action="Registrar">
-                        @*<div asp-validation-summary="All" class="text-danger"></div>*@
+                    <div class="custom-control custom-radio">
+                        <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
+                        <label class="custom-control-label text-info" for="customRadio2">Usuario</label>
+                    </div>
 
-                        <div class="form-group">
-                            <label asp-for="NombreUsuario">Username: <i class="fa fa-user"></i> </label>
-                            <input asp-for="NombreUsuario" class="form-control" placeholder="Ingresar usuario" />
-                            <span asp-validation-for="NombreUsuario" class="bg-danger"></span>
-                        </div>
-
-                        <div class="form-group">
-                            <label asp-for="ApellidoUsuario">Apellido: <i class="fa fa-user"></i> </label>
-                            <input asp-for="ApellidoUsuario" class="form-control" placeholder="Ingresar Apellido" />
-                            <span asp-validation-for="ApellidoUsuario" class="bg-danger"></span>
-                        </div>
-
-                        <div class="form-group">
-                            <label asp-for="Email">Email: <i class="fa fa-mail-bulk"></i> </label>
-                            <input asp-for="Email" class="form-control" placeholder="Ingresar email" />
-                            <span asp-validation-for="Email" class="bg-danger"></span>
-                        </div>
-
-
-                        <div class="form-group">
-                            <label asp-for="PasswordHash">Contraseña: <i class="fa fa-user-lock"></i></label>
-                            <input asp-for="PasswordHash" class="form-control" placeholder="Ingresar Contraseña" />
-                            <span asp-validation-for="PasswordHash" class="bg-danger"></span>
-                        </div>
-
-                        <div class="form-group">
-
-                            <div class="custom-control custom-radio">
-                                <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input" checked>
-                                <label class="custom-control-label text-info" for="customRadio1">Administrador</label>
-                            </div>
-                            <div class="custom-control custom-radio">
-                                <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
-                                <label class="custom-control-label text-info" for="customRadio2">Usuario</label>
-                            </div>
-
-                            <div class="custom-control custom-radio ">
-                                <input type="radio" id="customRadio3" name="customRadio" class="custom-control-input">
-                                <label class="custom-control-label text-info" for="customRadio3">Guest</label>
-                            </div>
-
-                            @*<label>Rol: </label>
-        <div class="list-group">
-            <a href="#" class="list-group-item ">Administrador</a>
-            <a href="#" class="list-group-item ">Invitado</a>
-        </div>*@
-
-                        </div>
-
-                        <div class="form-group form-check">
-                            <label class="form-check-label">
-                                <input class="form-check-input" type="checkbox" />
-                                Usuario activo?
-                            </label>
-                        </div>
-
-                        <button class="btn btn-info">Enviar</button>
-                        @Html.ValidationSummary(true, "", new { @class = "alert-danger" })
-                    </form>
+                    <div class="custom-control custom-radio">
+                        <input type="radio" id="customRadio3" name="customRadio" class="custom-control-input">
+                        <label class="custom-control-label text-info" for="customRadio3">Guest</label>
+                    </div>
 
                 </div>
 
             </div>
 
 
-        </div>
-    </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" type="checkbox" />
+                     Usuario activo?
+                </label>
+            </div>
 
-</body>
-</html>
+
+            <button class="btn btn-info">Enviar</button>
+            @Html.ValidationSummary(true, "", new { @class = "alert-danger" })
+        </form>
+
+</div>
+
+            </div>
+
+
+        @*</div>*@
+    @*</div>*@

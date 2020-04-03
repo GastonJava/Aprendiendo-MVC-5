@@ -48,8 +48,8 @@
     border-top: 1px solid transparent;*/
 }
 
-.navbar-nav {
-    
+.navbar-nav
+{
     color: red;
 }
 
@@ -59,6 +59,7 @@ span {
 
 /* Estilo de footer Layout  */
 footer {
+    height: auto;
     max-height: 100%;
 }
 
