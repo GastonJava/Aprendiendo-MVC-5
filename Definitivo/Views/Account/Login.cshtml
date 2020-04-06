@@ -11,13 +11,14 @@
 
 @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 
-<div class="container-fluid">
+<div class="container-fluid bg-dark">
 
     
-    <div class="center-form">
+    @*<div class="center-form">*@
+        
+    <div class="row">
 
-
-        <form class="border p-3 form justify-content-center" method="post" asp-controller="Account" asp-action="Login">
+        <form class="simple-login-container  p-3 form" method="post" asp-controller="Account" asp-action="Login">
             <div class="form-group">
                 <label asp-for="NombreUsuario">Username: </label>
                 <input class="form-control" placeholder="Ingresar usuario" asp-for="NombreUsuario" type="text" />
@@ -33,21 +34,44 @@
             <div class="form-group form-check">
                 <label class="form-check-label">
                     <input class="form-check-input" type="checkbox" />
-                    activar usuario?
+
                 </label>
+                <p class="text-muted">activar usuario?</p>
+                
             </div>
 
-            <button class="btn btn-info" type="submit" value="Usuario">Enviar</button>
-            @Html.ValidationSummary(true, "", new { @class = "alert-danger" });
-       
-        <div class="separation">
-            <h3 class="text-left align-content-center">Iniciar session </h3>
-        </div>
+            <div class="row justify-content-center">
+
+                <button class="btn btn-dark text-muted" type="submit" value="Usuario">Enviar</button>
+                @Html.ValidationSummary(true, "", new { @class = "alert-danger" });
+
+                <div class="separation">
+                    <h3 class="text-left align-content-center text-muted">Iniciar session</h3>
+                </div>
+
+            </div>
             
+
         </form>
 
-        
+        @*<div class="col bg-light">
+            <img src="~/imagenes/fuego.png" alt="firekid" style="width:90px;" />
+
+            <div class="row">
+                <div class="small">texto cualquiera para hacer prueba </div>
+                <div class="small">texto cualquiera para hacer prueba </div>
+                <div class="small">texto cualquiera para hacer prueba </div>
+                <div class="small">texto cualquiera para hacer prueba </div>
+                <div class="small">texto cualquiera para hacer prueba </div>
+            </div>
+        </div>*@
+
     </div>
+
+        
+
+        
+    @*</div>*@
 
 </div>
 
