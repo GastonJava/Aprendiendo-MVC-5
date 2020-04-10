@@ -1,0 +1,51 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+
+<head>
+    <meta name="viewport" content="width=device-width" />
+
+    <title>_libreriasSinLayouts</title>
+
+
+    @* INICIO JAVASCRIPT MDBOOTSTRAP *@
+
+    
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="~/dist/js/popper.min.js"></script>  @* js/popper.min.js *@
+
+
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="~/dist/js/mdb.min.js"></script> @*"js/mdb.min.js"*@
+
+    @* FIN JAVASCRIPT MDBOOTSTRAP *@
+
+
+    <!-- BOOTSTRAP START BOOTSTRAP-->
+
+    @* bootstrap CSS  *@
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+
+    <!-- JQuery -->
+    <script src="~/lib/jquery/dist/jquery.js"></script>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+
+    <!-- BOOTSTRAP END BOOTSTRAP-->
+
+    <link href="~/css/Galeria.css" rel="stylesheet" />
+
+</head>
+
+
+<div>
+    @RenderBody()
+    @*@IgnoreBody()*@
+
+    @*@RenderSection("Footer", required: false)*@
+</div>

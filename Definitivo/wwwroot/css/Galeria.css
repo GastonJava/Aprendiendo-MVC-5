@@ -1,0 +1,40 @@
+﻿body {
+
+    margin: 0px;
+    padding:0px;
+    box-sizing: border-box;
+    
+}
+
+section {
+    background-color: red;
+}
+
+.card-img {
+    /*min-height:150px;
+    background-color: red;
+    width: 225px;
+    background-size: cover;*/
+}
+
+.gallery {
+    background-color: grey;
+
+}
+
+    .gallery .pics {
+        -webkit-transition: all 350ms ease;
+        transition: all 350ms ease;
+    }
+
+    .gallery .animacion {
+        -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+        transform: scale(1);
+    }
+
+.img-space {
+
+    margin-bottom: 10px;
+
+}
